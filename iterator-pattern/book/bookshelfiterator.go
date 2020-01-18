@@ -12,7 +12,7 @@ func NewShelfIterator(bs BookShelf) *BookShelfIterator {
 }
 
 func (bs *BookShelfIterator) HasNext() bool {
-	if bs.index < bs.bookShelf.GetLength() {
+	if bs.index < len(bs.bookShelf) {
 		return true
 	}
 	return false

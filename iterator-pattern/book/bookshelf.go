@@ -1,8 +1,6 @@
 package book
 
-import (
-	"github.com/liquid-dev/design-patterns-in-go/iterator-parttern/iterator"
-)
+import "github.com/liquid-dev/design-patterns-in-go/iterator-pattern/iterator"
 
 type BookShelf []*Book
 
@@ -12,15 +10,6 @@ func NewShelf(maxsize int) BookShelf {
 
 func (bs BookShelf) GetBookAt(index int) *Book {
 	return bs[index]
-}
-
-func (bs *BookShelf) AppendBook(b *Book) {
-	*bs = append(*bs, b)
-
-}
-
-func (bs BookShelf) GetLength() int {
-	return len(bs)
 }
 
 func (bs BookShelf) Iterator() iterator.Iterator {
