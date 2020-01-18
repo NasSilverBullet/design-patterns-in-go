@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/liquid-dev/design-patterns-in-go/iterator-partern/book"
+	"github.com/liquid-dev/design-patterns-in-go/iterator-parttern/book"
 )
 
 func main() {

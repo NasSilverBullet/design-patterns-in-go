@@ -1,7 +1,7 @@
 package book
 
 import (
-	"github.com/liquid-dev/design-patterns-in-go/iterator-partern/iterator"
+	"github.com/liquid-dev/design-patterns-in-go/iterator-parttern/iterator"
 )
 
 type BookShelf []*Book
