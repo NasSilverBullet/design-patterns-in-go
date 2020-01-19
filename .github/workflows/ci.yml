@@ -36,3 +36,4 @@ jobs:
       run: |
         go run iterator-pattern/main.go
         go run adapter-pattern/main.go
+        go run template-method-pattern/main.go
