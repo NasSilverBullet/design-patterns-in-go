@@ -32,8 +32,11 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
 
-    - name: Run
-      run: |
-        go run iterator-pattern/main.go
-        go run adapter-pattern/main.go
-        go run template-method-pattern/main.go
+    - name: Iterator Pattern
+      run: go run iterator-pattern/main.go
+
+    - name: Adapter Pattern
+      run: go run adapter-pattern/main.go
+
+    - name: Template Method Pattern
+      run: go run template-method-pattern/main.go
