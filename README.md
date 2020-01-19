@@ -3,3 +3,4 @@
 # Design Patterns in Go
 
 - [Iterator Pattern](iterator-pattern/main.go)
+- [Adapter Pattern](adapter-pattern/main.go)
