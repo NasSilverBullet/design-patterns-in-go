@@ -1,7 +1,9 @@
-package book
+package book_test
 
 import (
 	"testing"
+
+	"github.com/liquid-dev/design-patterns-in-go/iterator-pattern/book"
 )
 
 func TestBook_GetName(t *testing.T) {
@@ -17,7 +19,7 @@ func TestBook_GetName(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			b := New(tt.fields.name)
+			b := book.New(tt.fields.name)
 			if got := b.GetName(); got != tt.want {
 				t.Errorf("Book.GetName() = %v, want %v", got, tt.want)
 			}
