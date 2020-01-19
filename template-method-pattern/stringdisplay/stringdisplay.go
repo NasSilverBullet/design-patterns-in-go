@@ -17,7 +17,7 @@ func New(s string) *StringDisplay {
 }
 
 func (sd *StringDisplay) Open() {
-	sd.PrintLine()
+	sd.printLine()
 }
 
 func (sd *StringDisplay) Print() {
@@ -25,10 +25,10 @@ func (sd *StringDisplay) Print() {
 }
 
 func (sd *StringDisplay) Close() {
-	sd.PrintLine()
+	sd.printLine()
 }
 
-func (sd *StringDisplay) PrintLine() {
+func (sd *StringDisplay) printLine() {
 	fmt.Print("+")
 	for i := 0; i < sd.width; i++ {
 		fmt.Print("-")

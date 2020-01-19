@@ -1,4 +1,4 @@
-package stringdisplay_test
+package chardisplay_test
 
 import (
 	"bytes"
@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/liquid-dev/design-patterns-in-go/template-method-pattern/stringdisplay"
+	"github.com/liquid-dev/design-patterns-in-go/template-method-pattern/chardisplay"
 )
 
 func captureStdout(t *testing.T, f func()) string {
@@ -30,7 +30,7 @@ func captureStdout(t *testing.T, f func()) string {
 	return buf.String()
 }
 
-func TestStringDisplay_Open(t *testing.T) {
+func TestCharDisplay_Open(t *testing.T) {
 	type fields struct {
 		string string
 	}
@@ -39,19 +39,19 @@ func TestStringDisplay_Open(t *testing.T) {
 		fields fields
 		want   string
 	}{
-		{"Success", fields{string: "hoge"}, "+----+\n"},
+		{"Success", fields{string: "hoge"}, "<<"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			sd := stringdisplay.New(tt.fields.string)
-			if got := captureStdout(t, sd.Open); !reflect.DeepEqual(got, tt.want) {
+			cd := chardisplay.New(tt.fields.string)
+			if got := captureStdout(t, cd.Open); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("StringDisplay.Open() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func TestStringDisplay_Print(t *testing.T) {
+func TestCharDisplay_Print(t *testing.T) {
 	type fields struct {
 		string string
 	}
@@ -60,19 +60,19 @@ func TestStringDisplay_Print(t *testing.T) {
 		fields fields
 		want   string
 	}{
-		{"Success", fields{string: "hoge"}, "|hoge|\n"},
+		{"Success", fields{string: "hoge"}, "hoge"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			sd := stringdisplay.New(tt.fields.string)
-			if got := captureStdout(t, sd.Print); !reflect.DeepEqual(got, tt.want) {
+			cd := chardisplay.New(tt.fields.string)
+			if got := captureStdout(t, cd.Print); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("StringDisplay.Print() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func TestStringDisplay_Close(t *testing.T) {
+func TestCharDisplay_Close(t *testing.T) {
 	type fields struct {
 		string string
 	}
@@ -81,12 +81,12 @@ func TestStringDisplay_Close(t *testing.T) {
 		fields fields
 		want   string
 	}{
-		{"Success", fields{string: "hoge"}, "+----+\n"},
+		{"Success", fields{string: "hoge"}, ">>\n"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			sd := stringdisplay.New(tt.fields.string)
-			if got := captureStdout(t, sd.Close); !reflect.DeepEqual(got, tt.want) {
+			cd := chardisplay.New(tt.fields.string)
+			if got := captureStdout(t, cd.Close); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("StringDisplay.Close() = %v, want %v", got, tt.want)
 			}
 		})
