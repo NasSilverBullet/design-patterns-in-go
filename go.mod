@@ -1,3 +1,3 @@
-module github.com/liquid-dev/design-patterns-in-go
+module github.com/NasSilverBullet/design-patterns-in-go
 
 go 1.13

@@ -1,6 +1,6 @@
 package book
 
-import "github.com/liquid-dev/design-patterns-in-go/iterator-pattern/iterator"
+import "github.com/NasSilverBullet/design-patterns-in-go/iterator-pattern/iterator"
 
 type BookShelf []*Book
 

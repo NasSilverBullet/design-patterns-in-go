@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/liquid-dev/design-patterns-in-go/adapter-pattern/banner"
+	"github.com/NasSilverBullet/design-patterns-in-go/adapter-pattern/banner"
 )
 
 func captureStdout(t *testing.T, f func()) string {

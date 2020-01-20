@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/liquid-dev/design-patterns-in-go/template-method-pattern/abstractdisplay"
-	"github.com/liquid-dev/design-patterns-in-go/template-method-pattern/chardisplay"
-	"github.com/liquid-dev/design-patterns-in-go/template-method-pattern/stringdisplay"
+	"github.com/NasSilverBullet/design-patterns-in-go/template-method-pattern/abstractdisplay"
+	"github.com/NasSilverBullet/design-patterns-in-go/template-method-pattern/chardisplay"
+	"github.com/NasSilverBullet/design-patterns-in-go/template-method-pattern/stringdisplay"
 )
 
 func main() {

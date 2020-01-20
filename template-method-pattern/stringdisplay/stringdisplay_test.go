@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/liquid-dev/design-patterns-in-go/template-method-pattern/stringdisplay"
+	"github.com/NasSilverBullet/design-patterns-in-go/template-method-pattern/stringdisplay"
 )
 
 func captureStdout(t *testing.T, f func()) string {

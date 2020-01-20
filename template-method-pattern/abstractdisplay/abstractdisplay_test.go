@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/liquid-dev/design-patterns-in-go/template-method-pattern/abstractdisplay"
+	"github.com/NasSilverBullet/design-patterns-in-go/template-method-pattern/abstractdisplay"
 )
 
 type mockAbstrctDispaly struct {

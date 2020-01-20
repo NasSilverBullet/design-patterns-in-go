@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/liquid-dev/design-patterns-in-go/iterator-pattern/book"
-	"github.com/liquid-dev/design-patterns-in-go/iterator-pattern/iterator"
+	"github.com/NasSilverBullet/design-patterns-in-go/iterator-pattern/book"
+	"github.com/NasSilverBullet/design-patterns-in-go/iterator-pattern/iterator"
 )
 
 func TestBookShelf_GetBookAt(t *testing.T) {

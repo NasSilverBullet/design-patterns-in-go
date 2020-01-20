@@ -1,8 +1,8 @@
 package printbanner
 
 import (
-	"github.com/liquid-dev/design-patterns-in-go/adapter-pattern/banner"
-	"github.com/liquid-dev/design-patterns-in-go/adapter-pattern/print"
+	"github.com/NasSilverBullet/design-patterns-in-go/adapter-pattern/banner"
+	"github.com/NasSilverBullet/design-patterns-in-go/adapter-pattern/print"
 )
 
 type PrintBanner struct {

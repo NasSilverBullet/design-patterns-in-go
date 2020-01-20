@@ -3,7 +3,7 @@ package book_test
 import (
 	"testing"
 
-	"github.com/liquid-dev/design-patterns-in-go/iterator-pattern/book"
+	"github.com/NasSilverBullet/design-patterns-in-go/iterator-pattern/book"
 )
 
 func TestBook_GetName(t *testing.T) {

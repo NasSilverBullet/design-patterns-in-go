@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/liquid-dev/design-patterns-in-go/iterator-pattern/book"
+	"github.com/NasSilverBullet/design-patterns-in-go/iterator-pattern/book"
 )
 
 func TestBookShelfIterator_HasNext(t *testing.T) {
