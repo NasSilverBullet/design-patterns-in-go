@@ -40,3 +40,6 @@ jobs:
 
     - name: Template Method Pattern
       run: go run template-method-pattern/main.go
+
+    - name: Factory Method Pattern
+      run: go run factory-method-pattern/main.go
