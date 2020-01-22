@@ -46,3 +46,6 @@ jobs:
 
     - name: Singleton Pattern
       run: go run singleton-pattern/main.go
+
+    - name: Prototype Pattern
+      run: go run prototype-pattern/main.go
