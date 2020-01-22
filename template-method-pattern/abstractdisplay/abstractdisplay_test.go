@@ -8,6 +8,7 @@ import (
 )
 
 type mockAbstrctDispaly struct {
+	abstractdisplay.AbstractDisplay
 	openCount  int
 	printCount int
 	closeCount int
@@ -34,7 +35,7 @@ func TestDisplay_Display(t *testing.T) {
 		fields fields
 		want   *mockAbstrctDispaly
 	}{
-		{"Success", fields{&mockAbstrctDispaly{}}, &mockAbstrctDispaly{1, 5, 1}},
+		{"Success", fields{&mockAbstrctDispaly{}}, &mockAbstrctDispaly{openCount: 1, printCount: 5, closeCount: 1}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

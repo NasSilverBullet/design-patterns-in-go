@@ -8,13 +8,12 @@ import (
 )
 
 type mockProduct struct {
+	framework.Product
 	owner      string
 	registered bool
 }
 
-func (m *mockProduct) Use() {}
-
-type mockFactory struct{}
+type mockFactory struct{ framework.Factory }
 
 func (m *mockFactory) CreateProduct(owner string) framework.Product {
 	return &mockProduct{
