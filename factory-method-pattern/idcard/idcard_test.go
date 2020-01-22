@@ -47,7 +47,6 @@ func TestIDCard_Use(t *testing.T) {
 			if got := captureStdout(t, ic.Use); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("IDCard.Use() = %v, want %v", got, tt.want)
 			}
-
 		})
 	}
 }
