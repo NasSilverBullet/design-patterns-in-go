@@ -43,3 +43,6 @@ jobs:
 
     - name: Factory Method Pattern
       run: go run factory-method-pattern/main.go
+
+    - name: Singleton Pattern
+      run: go run singleton-pattern/main.go

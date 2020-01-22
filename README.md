@@ -6,3 +6,4 @@
 - [Adapter Pattern](adapter-pattern/main.go)
 - [Template Method Pattern](template-method-pattern/main.go)
 - [Factory Method Pattern](factory-method-pattern/main.go)
+- [Singleton Pattern](singleton-pattern/main.go)
