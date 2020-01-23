@@ -8,3 +8,4 @@
 - [Factory Method Pattern](factory-method-pattern/main.go)
 - [Singleton Pattern](singleton-pattern/main.go)
 - [Prototype Pattern](prototype-pattern/main.go)
+- [Builder Pattern](builder-pattern/main.go)

@@ -49,3 +49,9 @@ jobs:
 
     - name: Prototype Pattern
       run: go run prototype-pattern/main.go
+
+    - name: Builder Pattern
+      run: |
+        go run builder-pattern/main.go plain
+        go run builder-pattern/main.go HTML
+        cat Greeting.html
