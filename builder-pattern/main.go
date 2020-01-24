@@ -25,9 +25,7 @@ func run() error {
 
 	switch os.Args[1] {
 	case "plain":
-		if err := makePlain(); err != nil {
-			return err
-		}
+		makePlain()
 		return nil
 
 	case "HTML":
@@ -41,23 +39,23 @@ func run() error {
 	return nil
 }
 
-func makePlain() error {
+func makePlain() {
 	tb := textbuilder.New()
 	d := director.New(tb)
-	if err := d.Construct(); err != nil {
-		return err
-	}
+	d.Construct()
 	fmt.Println(tb.GetResult())
-	return nil
 }
 
 func makeHTML() error {
-	hb := htmlbuilder.New()
-	d := director.New(hb)
-	if err := d.Construct(); err != nil {
+	f, err := os.OpenFile("index.html", os.O_RDWR|os.O_CREATE, 0666)
+	if err != nil {
 		return err
 	}
-	fmt.Println(hb.GetResult())
+	defer f.Close()
+	hb := htmlbuilder.New(f)
+	d := director.New(hb)
+	d.Construct()
+	fmt.Println(f.Name())
 	return nil
 }
 

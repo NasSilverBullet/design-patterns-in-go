@@ -10,10 +10,9 @@ func New() *TextBuilder {
 	return &TextBuilder{}
 }
 
-func (tb *TextBuilder) MakeTitle(title string) error {
+func (tb *TextBuilder) MakeTitle(title string) {
 	tb.buffer += "===============================\n"
 	tb.buffer += fmt.Sprintf("『%s』\n\n", title)
-	return nil
 }
 
 func (tb *TextBuilder) MakeString(str string) {
@@ -28,9 +27,8 @@ func (tb *TextBuilder) MakeItems(items []string) {
 	tb.buffer += "\n"
 }
 
-func (tb *TextBuilder) Close() error {
+func (tb *TextBuilder) Close() {
 	tb.buffer += "===============================\n"
-	return nil
 }
 
 func (tb *TextBuilder) GetResult() string {

@@ -2,28 +2,22 @@ package htmlbuilder
 
 import (
 	"fmt"
-	"os"
+	"io"
 )
 
 type HTMLBuilder struct {
-	writer *os.File
+	writer io.Writer
 }
 
-func New() *HTMLBuilder {
-	return &HTMLBuilder{}
-}
-
-func (hb *HTMLBuilder) MakeTitle(title string) error {
-	f, err := os.OpenFile(fmt.Sprintf("%s.html", title), os.O_RDWR|os.O_CREATE, 0666)
-	if err != nil {
-		return err
+func New(w io.Writer) *HTMLBuilder {
+	return &HTMLBuilder{
+		writer: w,
 	}
+}
 
-	hb.writer = f
+func (hb *HTMLBuilder) MakeTitle(title string) {
 	hb.writer.Write([]byte(fmt.Sprintf("<html><head><title>%s</title></head></body>", title)))
 	hb.writer.Write([]byte(fmt.Sprintf("<h1>%s</h>", title)))
-
-	return nil
 }
 
 func (hb *HTMLBuilder) MakeString(str string) {
@@ -38,15 +32,6 @@ func (hb *HTMLBuilder) MakeItems(items []string) {
 	hb.writer.Write([]byte("</ul>"))
 }
 
-func (hb *HTMLBuilder) Close() error {
+func (hb *HTMLBuilder) Close() {
 	hb.writer.Write([]byte("</body></html>"))
-	if err := hb.writer.Close(); err != nil {
-		return err
-	}
-
-	return nil
-}
-
-func (hb *HTMLBuilder) GetResult() string {
-	return hb.writer.Name()
 }

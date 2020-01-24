@@ -12,10 +12,8 @@ func New(b builder.Builder) *Director {
 	}
 }
 
-func (d *Director) Construct() error {
-	if err := d.builder.MakeTitle("Greeting"); err != nil {
-		return err
-	}
+func (d *Director) Construct() {
+	d.builder.MakeTitle("Greeting")
 
 	d.builder.MakeString("朝から昼にかけて")
 	d.builder.MakeItems([]string{
@@ -30,8 +28,5 @@ func (d *Director) Construct() error {
 		"さようなら",
 	})
 
-	if err := d.builder.Close(); err != nil {
-		return err
-	}
-	return nil
+	d.builder.Close()
 }

@@ -13,9 +13,8 @@ type mockBuilder struct {
 	text string
 }
 
-func (m *mockBuilder) MakeTitle(title string) error {
+func (m *mockBuilder) MakeTitle(title string) {
 	m.text += title
-	return nil
 }
 
 func (m *mockBuilder) MakeString(str string) {
@@ -26,9 +25,8 @@ func (m *mockBuilder) MakeItems(items []string) {
 	m.text += strings.Join(items, "")
 }
 
-func (m *mockBuilder) Close() error {
+func (m *mockBuilder) Close() {
 	m.text += "おわり"
-	return nil
 }
 
 func TestDirector_Construct(t *testing.T) {
