@@ -54,4 +54,4 @@ jobs:
       run: |
         go run builder-pattern/main.go plain
         go run builder-pattern/main.go HTML
-        cat Greeting.html
+        cat index.html
