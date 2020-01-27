@@ -9,3 +9,4 @@
 - [Singleton Pattern](singleton-pattern/main.go)
 - [Prototype Pattern](prototype-pattern/main.go)
 - [Builder Pattern](builder-pattern/main.go)
+- [Abstract Factory Pattern](abstract-factory-pattern/main.go)

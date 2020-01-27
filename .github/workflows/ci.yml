@@ -55,3 +55,8 @@ jobs:
         go run builder-pattern/main.go plain
         go run builder-pattern/main.go HTML
         cat index.html
+
+    - name: Abstract Factory Pattern
+      run: |
+        go run abstract-factory-pattern/main.go list
+        cat index.html
